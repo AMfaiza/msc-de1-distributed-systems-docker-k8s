@@ -1,0 +1,36 @@
+# Métadonnées Git
+.git/
+.gitignore
+.gitattributes
+
+# Environnements virtuels Python
+venv/
+.venv/
+env/
+
+# Caches et artefacts Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Fichiers d'IDE / éditeur locaux
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Fichiers d'environnement avec secrets
+.env
+*.env
+
+# Docs / preuves inutiles au runtime
+README.md
+report/
+evidence/
+security/
+k8s/
+kind/
+compose.yaml

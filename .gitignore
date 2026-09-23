@@ -1,0 +1,23 @@
+# Environnements virtuels Python
+venv/
+.venv/
+env/
+
+# Caches Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+
+# Fichiers d'IDE / éditeur
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Secrets / fichiers d'environnement locaux
+.env
+*.env
+*.key
+*.pem
+secret*.yaml

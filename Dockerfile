@@ -15,16 +15,16 @@ RUN groupadd --gid 10001 appgroup \
 # Dossier de travail dans le conteneur
 WORKDIR /app
 
-# Copie d'abord le fichier des dépendances (pour profiter du cache Docker)
+# pour profiter du cache Docker
 COPY requirements.txt .
 
-# Installe les dépendances sans cache, puis ajoute curl (pour le healthcheck)
+# Installe les dépendances sans cache,  ajout curl (pour le healthcheck)
 RUN pip install --no-cache-dir -r requirements.txt \
     && apt-get update \
     && apt-get install -y --no-install-recommends curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Copie uniquement ce qui est nécessaire à l'exécution
+# Copie des fichiers dexécution
 COPY app/ ./app/
 COPY run.py .
 

@@ -1,0 +1,25 @@
+services:
+  flask-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: amfaiza/msc-de1-flask-app:1.0.0
+    container_name: msc-de1-flask-app
+    ports:
+      - "8080:5000"
+    environment:
+      APP_PORT: "5000"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/"]
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    read_only: true
+    tmpfs:
+      - /tmp

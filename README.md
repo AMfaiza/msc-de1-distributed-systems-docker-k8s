@@ -1,4 +1,4 @@
-# MSc DE1 — Distributed Systems: Docker & Local Kubernetes
+# Distributed Systems: Docker & Local Kubernetes
 
 Containerize, secure, publish and orchestrate an existing Flask application using Docker, Docker Hub and a local Kubernetes cluster (kind).
 
